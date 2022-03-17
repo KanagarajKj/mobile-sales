@@ -36,7 +36,7 @@ section {
 /* buttons */
 
 .btn-primary {
-    background-color:#395B64;
+    background-color:#0759dd;
     color:var(--bg-clr);
     padding: 0.8rem 1.5rem;
     font-size: 1.2rem;
@@ -49,12 +49,13 @@ section {
     background: white;
     padding: 2rem;
     border-bottom-left-radius: 50px;
-
+    position: fixed;
+    width: 100%;
 }
     
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: #11052C;
 }
@@ -71,13 +72,13 @@ display: none;
     cursor:pointer;
 }
 
-.nav-options {
+/* .nav-options {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 0.5rem;
-}
+} */
 
 .nav-options li a {
  padding: 0 0.8rem;
@@ -87,10 +88,9 @@ color:#203239;
 }
 
 
-a:hover{
-    background-color: aqua;
-   
-}
+/* a:hover{
+    background-color: aqua;  
+} */
 
 .navbar .container {
     display: flex;
@@ -105,10 +105,11 @@ a:hover{
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.4rem;
+    margin-top: 2rem;
 }
 
 .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     margin: 1rem auto;
 }
@@ -116,6 +117,7 @@ a:hover{
 .link-primary {
     margin-left: 1rem;
     text-decoration: underline;
+    display: block;
 }
 
 .link-primary img {
@@ -134,3 +136,94 @@ margin-bottom: 1rem;
 
 
 
+.feature {
+    background-color:var(--clr-primary);
+    color: white;
+}
+
+.feature-list{
+    padding-left:0.25rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+.feature-list li{
+    font-size:1.3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    position:relative;
+}
+
+.feature-list li::before{
+    content: '';
+    position:absolute;
+    margin-left:-2rem;
+    width:2px;
+    height:2px;
+    background-image: url('../assests/images/bullet.svg')
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+
+/* testimonial section */
+
+.testimonial-section{
+    background-color: #0759dd;
+    text-align: center;
+}
+
+.testimonial-section ul img{
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top:-5rem;
+    border: 5px solid #006bd6;
+}
+
+.testimonial-section ul li{
+    background-color:#006bd6;
+    padding: 2rem 1rem;
+    width: 80%;
+    margin: 0 auto 5rem auto ;
+    border-radius: 30px;
+}
+
+.testimonial-section li blockquote{
+    margin:0.5rem auto;
+}
+
+/* contact section */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom:1.5rem;
+}
+
+.contact-section label {
+    font-size: 1.2rem;
+    font-weight:300;
+    display: block;
+    
+}
+
+input,textarea {
+    margin-top:0.5rem;
+    border-radius: 10px;
+    border:1px solid black;
+    padding:0.5rem;
+    width: 100%;
+}
+
+input[type='submit'] {
+    cursor:pointer;
+    display: inline-block;
+    border:none;
+}
+
+textarea{
+    resize:none;
+}
+
+.contact-section iframe {
+  width: 100%;
+  height: 19rem;
+}
